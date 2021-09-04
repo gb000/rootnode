@@ -1,0 +1,7 @@
+containers/rootnode/volume/bitcoin/*
+!containers/rootnode/volume/bitcoin/.bitcoin/.keep
+containers/rootnode/volume/scripts/testfile
+containers/rootnode/volume/scripts/test.sh
+containers/rootnode/volume/eps/*
+!containers/rootnode/volume/eps/.keep
+containers/rootnode/volume/node_configured

@@ -1,2 +1,2 @@
-docker network create -d bridge docker_model
+docker network create -d bridge rootnode
 docker-compose up --build &
