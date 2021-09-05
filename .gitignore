@@ -5,3 +5,10 @@ containers/rootnode/volume/scripts/test.sh
 containers/rootnode/volume/eps/*
 !containers/rootnode/volume/eps/.keep
 containers/rootnode/volume/node_configured
+containers/rootnode/volume/c-lightning/*
+!containers/rootnode/volume/c-lightning/.lightning/.keep
+containers/rootnode/volume/tor/*
+!containers/rootnode/volume/tor/etc/.keep
+!containers/rootnode/volume/tor/lib/.keep
+containers/rootnode/volume/verifications/*
+!containers/rootnode/volume/verifications/.keep

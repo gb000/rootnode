@@ -4,14 +4,14 @@
 source /app/scripts/config_parameters.sh
 
 sleep 5
-if [ -e /app/eps/wallet_created ]
+if [ -e /app/bitcoin/.bitcoin/default ]
 then
     echo "Wallet already created! Ignoring wallet creation"
     $bitcoincli_path --datadir=/app/bitcoin/.bitcoin loadwallet default
 else
     echo "Creating wallet"
     $bitcoincli_path --datadir=/app/bitcoin/.bitcoin createwallet default
-    touch /app/eps/wallet_created
+    #touch /app/eps/wallet_created
     echo "Wallet created."
 fi
 
@@ -157,8 +157,6 @@ append_log = false
 # Format to use for logging messages
 #see docs https://docs.python.org/3/library/logging.html#formatter-objects
 log_format = %(levelname)s:%(asctime)s: %(message)s
-
-
 
 
 

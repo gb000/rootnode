@@ -1,17 +1,18 @@
 #!/bin/bash
 
 ## You can put some message here
-echo "You're running rootNode created and mantained by Gui Bressan"
-
-# Starting tor socks5 proxy
-service tor start
+echo "Running rootNode"
 
 # Start / install services
 ##############################################################################
 ##############################################################################
-if [ -e /app/node_configured ]
+if [ -e /app/verifications/not_first_run ]
 then
     echo "Node already configured, starting services"
+    
+    #Setting up HiddenService
+    /app/scripts/onion_install.sh
+    
     # Starting bitcoind
     /app/scripts/bitcoin_start.sh &
     
@@ -20,13 +21,17 @@ then
 
 else
     echo "Setting up node"
+    
+    #Setting up HiddenService
+    /app/scripts/onion_install.sh
+    
     # Setting up bitcoind
     /app/scripts/bitcoin_install.sh
     
     # Setting up EPS
     /app/scripts/eps_install.sh
-    
-    touch /app/node_configured
+
+    touch /app/verifications/not_first_run
     echo "Done! Please restart the container"
 fi
 # /app/scripts/test.sh

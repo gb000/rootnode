@@ -45,3 +45,25 @@ wallet1_xpub1=xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6
     eps_binary_path=/usr/local/bin/electrum-personal-server
 ##############################################################################
 ##############################################################################
+
+
+
+# C-lightning
+##############################################################################
+##############################################################################
+lightning_alias=rootNode
+lightning_rgb=000000
+lightning_port=9735
+lightning_onion_port=9735
+lightning_bind=127.0.0.1
+lightning_min_capacity_sat=100000
+lightning_fee_base=1000
+lightning_fee_per_satoshi=1000
+
+# Don't change nothing here!
+    c_lightning_tag=v0.10.1
+    lightningd_path=/app/c-lightning/lightningd/lightningd
+    lightning_cli_path=/app/c-lightning/cli/lightning-cli
+    lightning_data_path=/app/c-lightning/.lightning
+##############################################################################
+##############################################################################
