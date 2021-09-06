@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ## You can put some message here
-echo "Running rootNode"
+echo "You're welcome!"
+
+sleep 2
 
 # Start / install services
 ##############################################################################
@@ -19,6 +21,9 @@ then
     # Starting EPS
     /app/scripts/eps_start.sh &
 
+    ## "tail -f" will keep this container alive, if you want to watch some logfile, you can change /dev/null to the path of the logfile that you want to watch 
+    tail -f /dev/null
+
 else
     echo "Setting up node"
     
@@ -32,11 +37,10 @@ else
     /app/scripts/eps_install.sh
 
     touch /app/verifications/not_first_run
-    echo "Done! Please restart the container"
+    echo "Done! Please start the container again (./up.sh)"
+    
 fi
 # /app/scripts/test.sh
 ##############################################################################
 ##############################################################################
 
-## "tail -f" will keep this container alive, if you want to watch some logfile, you can change /dev/null to the path of the logfile that you want to watch 
-tail -f /dev/null

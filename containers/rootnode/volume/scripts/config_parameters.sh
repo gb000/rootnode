@@ -15,8 +15,10 @@ bitcoin_prune=3072
 # Don't change nothing here!
     bitcoind_path=/app/bitcoin/bitcoin-0.21.1/bin/bitcoind
     bitcoincli_path=/app/bitcoin/bitcoin-0.21.1/bin/bitcoin-cli
-    bitcoincore_download=https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-aarch64-linux-gnu.tar.gz
-    bitcoincore_tar=bitcoin-0.21.1-aarch64-linux-gnu.tar.gz
+    bitcoincore_arm64_download=https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-aarch64-linux-gnu.tar.gz
+    bitcoincore_arm64_tar=bitcoin-0.21.1-aarch64-linux-gnu.tar.gz
+    bitcoincore_amd64_download=https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
+    bitcoincore_amd64_tar=bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
 ##############################################################################
 ##############################################################################
 

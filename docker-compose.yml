@@ -6,8 +6,9 @@ services:
     working_dir: /app
     volumes:
       - $PWD/containers/rootnode/volume:/app
-    ##Is possible to open ports too (EXTERNAL : INTERNAL)
+    ## Is possible to open ports too (EXTERNAL : INTERNAL)
     ports: 
+      ## Electrum Personal Server (For LAN connections)
       - 50002:50002
     ##If you need, this container will only start after another container gets up.
     # depends_on: 
