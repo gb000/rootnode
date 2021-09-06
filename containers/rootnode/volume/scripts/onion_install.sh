@@ -12,10 +12,10 @@ then
     
     rm -rf /var/lib/tor/*
     cp -r /app/tor/lib/* /var/lib/tor
-    chown -R debian-tor debian-tor /var/lib/tor
+    chown -R debian-tor:debian-tor /var/lib/tor
     rm -rf /etc/torrc
     cp /app/tor/etc/torrc /etc/torrc
-    chown -R debian-tor debian-tor /etc/torrc
+    chown -R debian-tor:debian-tor /etc/torrc
 
     service tor restart
 
