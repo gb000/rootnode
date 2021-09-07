@@ -1,6 +1,7 @@
 #!/bin/bash
 containers/rootnode/volume/scripts/animation.sh
 
+containers/rootnode/volume/scripts/create_dir.sh
 
 if [ -e containers/rootnode/volume/verifications/is_arch_set ]
 then
