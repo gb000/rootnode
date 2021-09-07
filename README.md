@@ -1,21 +1,40 @@
-# rootNode: A full command line infrastructure for your Bitcoin and Lightning Node
+# RootNode: A full command line infrastructure for your Bitcoin and Lightning Node
 ## This project runs on Linux and Mac OS.
 
-* To run, you would need to have docker and docker-compose installed in your Linux based system
+## You can test this project, but for now, is not recommended run in a production ambient
+#
+## Services Included in the Project
 
-* If you want, configure the node credentials/misc in the file "config_parameters.sh"
+* Bitcoin Core
+* Electrum Personal Server (Hidden Service remote connection available by default)
+* C-lightning (Hidden Service income connections available by default)
+* Spark Wallet (Hidden Service remote connection available by default)
+* Ride The Lightning (Hidden Service remote connection available by default)
+#
+## Services Working Now
 
-* To start the containers
+* Bitcoin Core
+* Electrum Personal Server (Hidden Service remote connection available by default)
+#
+## Getting Started
+
+* To run, you would need to have docker and docker-compose installed on your system
+
+* You can configure the services credentials, wallet public keys and more in the file "config_parameters.sh"
+#
+* Start the containers
 
 ```bash
 ./up.sh
 ```
 
-* To stop the containers
+* Stop the containers
 ```bash
 ./down.sh
 ```
-* To attach to container bash
+* Attach to container bash
 ```bash
 docker exec -it rootnode bash
 ```
+#
+# Thank you for testing this project!

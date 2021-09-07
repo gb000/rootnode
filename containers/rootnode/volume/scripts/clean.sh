@@ -18,8 +18,12 @@ rm -rf ../eps/electrum-personal-server-eps-v0.2.2
 rm -rf ../tor/etc/torrc
 rm -rf ../tor/lib/keys
 rm -rf ../tor/lib/lightning
+rm -rf ../tor/lib/eps
 rm -rf ../tor/lib/lock
 rm -rf ../tor/lib/state
+rm -rf ../tor/lib/cached-certs
+rm -rf ../tor/lib/cached-microdesc-consensus
+rm -rf ../tor/lib/cached-microdescs.new
 
 rm -rf ../verifications/is_arch_set
 rm -rf ../verifications/is_onion_set
