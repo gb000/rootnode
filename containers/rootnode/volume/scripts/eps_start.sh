@@ -163,6 +163,16 @@ log_format = %(levelname)s:%(asctime)s: %(message)s
 
 " > config.ini
 
+echo "Adding alias for Electrum Personal Server"
+
+touch /usr/local/bin/eps && echo "
+#!/bin/bash
+$eps_binary_path $eps_config_ini_path
+" > /usr/local/bin/eps && chmod 700 /usr/local/bin/eps
+touch /usr/local/bin/eps_rescan && echo "
+$eps_binary_path --rescan $eps_config_ini_path
+" > /usr/local/bin/eps_rescan && chmod 700 /usr/local/bin/eps_rescan
+
 echo "Starting Electrum Personal Server"
 $eps_binary_path config.ini
 

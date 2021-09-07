@@ -30,6 +30,9 @@ else
 HiddenServiceDir /var/lib/tor/lightning/
 HiddenServicePort $lightning_onion_port $lightning_bind:$lightning_port
 
+HiddenServiceDir /var/lib/tor/eps/
+HiddenServicePort $eps_port $eps_host:$eps_port
+
     " >> /etc/tor/torrc
 
     service tor restart
